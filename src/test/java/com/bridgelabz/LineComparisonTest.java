@@ -21,5 +21,13 @@ public class LineComparisonTest {
         Assertions.assertTrue(res);
 
     }
+    @Test
+    public void givenInputCompareLengthOfLines() {
+        double line1 = obj.lengthOfLineCalculation(1.2, 2.2, 3.2, 5.2);
+        double line2 = obj1.lengthOfLineCalculation(1.2, 2.2, 3.2, 9.2);
+
+        double res = obj.compareLengthOfLinesToFindWhichIsGreater(line1, line2);
+        Assertions.assertEquals(line2, res);
+    }
 
 }
